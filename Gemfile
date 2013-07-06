@@ -1,12 +1,18 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-
+gem 'bootstrap-sass', '2.2.2'
+gem 'bcrypt-ruby', '3.0.1'
+gem 'faker', '1.0.1'
+gem 'will_paginate', '3.0.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
+group :development, :test do
+  gem 'sqlite3', '1.3.7'
+  gem 'rspec-rails', '2.13.0'
+  gem 'annotate', '2.5.0'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,6 +28,11 @@ end
 
 gem 'jquery-rails'
 
+group :test do
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '1.4.0'
+end
+	
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
